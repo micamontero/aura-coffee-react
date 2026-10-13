@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+
+    /* COLORS */
+
+    --color-bg: #F5F1EB;
+    --color-dark: #111111;
+    --color-text: #1E1E1E;
+    --color-text-light: #777777;
+    --color-accent: #C8A27A;
+    --color-white: #FFFFFF;
+
+    /* TYPOGRAPHY */
+
+    --font-title: "Playfair Display", serif;
+    --font-text: "Inter", sans-serif;
+
+    /* SPACING */
+
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* BORDER RADIUS */
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    /* SHADOWS */
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+}
+
+#root {
+    min-height: 100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+main {
+    flex:1;
+}
+
+/* BODY */
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-text);
+}
+
+
+/* CONTAINER */
+
+.container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+}

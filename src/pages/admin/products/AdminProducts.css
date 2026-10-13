@@ -1,0 +1,430 @@
+/* =====================
+   ADMIN HERO
+   ===================== */
+
+.admin-hero {
+    background-color: var(--color-dark);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(200, 162, 122, 0.12) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+.admin-hero__subtitle {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-md);
+}
+
+.admin-hero__title {
+    font-family: var(--font-title);
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 1.1;
+}
+
+/* =====================
+   TABLA
+   ===================== */
+
+.admin-products {
+    padding: 60px 0;
+}
+
+.admin-products__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+
+.admin-products__count {
+    font-size: 13px;
+    color: var(--color-text-light);
+    letter-spacing: 0.5px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-white);
+}
+
+.products-table thead {
+    background-color: var(--color-dark);
+}
+
+.products-table th {
+    padding: 16px 24px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: left;
+    white-space: nowrap;
+}
+
+.products-table th:first-child {
+    color: transparent;
+    width: 72px;
+}
+
+.products-table td {
+    padding: 14px 24px;
+    font-size: 14px;
+    color: var(--color-text);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    vertical-align: middle;
+}
+
+.products-table tr:last-child td {
+    border-bottom: none;
+}
+
+.products-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+.products-table tbody tr:hover td {
+    background-color: #FAF7F3;
+}
+
+.products-table img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg);
+    padding: 4px;
+}
+
+.product-name {
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.product-category {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-top: 3px;
+}
+
+.product-description {
+    font-size: 12px;
+    color: var(--color-text-light);
+    margin-top: 4px;
+    max-width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    font-family: var(--font-title);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.product-date {
+    font-size: 12px;
+    color: var(--color-text-light);
+}
+
+.table-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    background: none;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-edit:hover {
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.btn-delete {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #cc0000;
+    background: none;
+    border: 1.5px solid rgba(204, 0, 0, 0.25);
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-delete:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+    color: var(--color-white);
+}
+
+/* =====================
+   FORMULARIO
+   ===================== */
+
+.admin-form {
+    padding: 0 0 100px;
+    background-color: var(--color-bg);
+}
+
+.admin-form__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+}
+
+.admin-form__header {
+    padding: 60px 0 32px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+.admin-form__eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 8px;
+}
+
+.admin-form__title {
+    font-family: var(--font-title);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.admin-form form {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.form-row {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.form-group .errors{
+    font-size: 10px;
+    color: red;
+}
+
+.admin-form label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+    width: 100%;
+    font-family: var(--font-text);
+    font-size: 14px;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border: 1.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus,
+.admin-form select:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(200, 162, 122, 0.12);
+}
+
+.admin-form textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.form-divider {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.06);
+    margin: 4px 0;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: var(--spacing-xl);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--color-dark);
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.form-actions button:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: grayscale(100%);
+}
+
+.admin-form .btn-primary {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    background-color: var(--color-dark);
+    border: 1.5px solid var(--color-dark);
+    border-radius: var(--radius-sm);
+    padding: 14px 32px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.admin-form .btn-primary:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+.admin-form .btn-secondary {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    background: none;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius-sm);
+    padding: 14px 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.admin-form .btn-secondary:hover {
+    color: var(--color-dark);
+    border-color: var(--color-dark);
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+
+@media (max-width: 768px) {
+
+    .admin-hero__title {
+        font-size: 36px;
+    }
+
+    .admin-form form {
+        padding: 28px 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .checkbox-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .admin-form .btn-primary,
+    .admin-form .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+}

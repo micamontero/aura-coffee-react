@@ -1,0 +1,10 @@
+.admin-users {
+    padding: 60px 0;
+}
+
+.loading-text {
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-text-light);
+    padding: 40px;
+}
