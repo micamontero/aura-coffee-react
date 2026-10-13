@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useForm } from "react-hook-form"
+import { useForm, useWatch } from "react-hook-form"
 import { Link } from "react-router"
 import Swal from "sweetalert2"
 import { createUser } from "../../services/users.service"
@@ -15,12 +15,12 @@ export default function Register() {
     const {
         register,
         handleSubmit,
-        watch,
+        control,
         reset,
         formState: { errors, isValid }
     } = useForm({ mode: "onBlur" })
 
-    const password = watch("password")
+    const password = useWatch({ control, name: "password" })
 
     async function onSubmit(data) {
         try {
